@@ -1,0 +1,165 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f0f2f5, #e2eafc);
+    color: #333;
+    line-height: 1;
+    padding: 2rem 0;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Title */
+  .container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #143454;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Job Card */
+  .job-card {
+    background:linear-gradient(TO RIGHT,rgb(51, 6, 97),rgb(87, 86, 98));
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px rgba(238, 234, 234, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  .job-card h3 {
+    font-size: 1.5rem;
+    color: #e6ed2f;
+    margin-bottom: 0.5rem;
+  }
+  .job-card p {
+    margin: 0.3rem 0;
+    color: #f3fbfc;
+  }
+  .job-card p strong {
+    color: #2481e4;
+  }
+  
+  /* Apply Button */
+  button.applyBtn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4a00e0;
+    background-image: linear-gradient(to right, #4a00e0, #8e2de2);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button.applyBtn:hover {
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  }
+  
+  /* Modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  .modal-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  .modal-content textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+  }
+  .modal-content button {
+    margin-top: 1rem;
+    background: #6a11cb;
+    background-image: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .modal-content button:hover {
+    background-image: linear-gradient(to right, #2575fc, #6a11cb);
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+  }
+  
+  .modal {
+  position: fixed;
+  z-index: 10;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: red;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

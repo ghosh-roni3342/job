@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apply-container {
+background:linear-gradient(TO RIGHT,rgb(231, 189, 217),rgb(59, 56, 93));
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.apply-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.apply-form textarea {
+  resize: vertical;
+}
+
+.upload-label {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.apply-form button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.apply-form button:hover {
+  background: linear-gradient(135deg, #6dd5fa, #2980b9);
+}

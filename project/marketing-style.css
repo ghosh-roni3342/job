@@ -1,0 +1,67 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffdf7;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #ff5722;
+  margin-bottom: 30px;
+}
+
+.job-listing {
+ background:linear-gradient(TO RIGHT,rgb(231, 189, 217),rgb(59, 56, 93));
+  border-left: 5px solid #ff5722;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 650px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.job-listing h2 {
+  color: #333;
+}
+
+.applyBtn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4a00e0;
+    background-image: linear-gradient(to right, #4a00e0, #8e2de2);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .applyBtn:hover {
+    background-image: linear-gradient(to right, #a45ae6, #4a00e0);
+  }
+
+.apply-form {
+  display: none;
+  margin-top: 15px;
+}
+
+.apply-form input,
+.apply-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.submit-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}

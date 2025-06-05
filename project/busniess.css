@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9fb;
+  color: #333;
+  padding: 30px;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.job-listing {
+background:linear-gradient(TO RIGHT,rgb(231, 189, 217),rgb(59, 56, 93));
+  border-radius: 12px;
+  padding: 30px;
+  margin: 25px auto;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-listing:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.job-listing h2 {
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.job-listing p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+
+ .applyBtn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4a00e0;
+    background-image: linear-gradient(to right, #4a00e0, #8e2de2);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .applyBtn:hover {
+    background-image: linear-gradient(to right, #6b5a79, #4a00e0);
+  }

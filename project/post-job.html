@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Post a Job</title>
+  <link rel="stylesheet" href="post-job.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 class="post-job-title">Post a New Job</h2>
+    <form id="jobForm" class="post-job-form">
+      <input type="hidden" id="editIndex" value="-1" />
+      
+      <label for="jobTitle">Job Title</label>
+      <input type="text" id="jobTitle" placeholder="Enter job title" required />
+
+      <label for="company">Company Name</label>
+      <input type="text" id="company" placeholder="Enter company name" required />
+
+      <label for="location">Location</label>
+      <input type="text" id="location" placeholder="Enter location" required />
+
+      <label for="mobile">Mobile Number</label>
+      <input
+        type="tel"
+        id="mobile"
+        placeholder="10-digit Mobile Number"
+        pattern="[0-9]{10}"
+        maxlength="10"
+        required
+      />
+
+      <label for="description">Job Description</label>
+      <textarea id="description" rows="5" placeholder="Enter job description" required></textarea>
+
+      <button type="submit">Post Job</button>
+    </form>
+
+    <h3 style="margin-top: 2rem;">Recently Posted Jobs</h3>
+    <ul id="jobList"></ul>
+
+    <p style="margin-top: 1rem;"><a href="jobs.html">View Posted Jobs</a></p>
+  </div>
+
+  <script>
+    const jobForm = document.getElementById("jobForm");
+    const jobList = document.getElementById("jobList");
+    let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+
+    function renderJobs() {
+      jobList.innerHTML = "";
+      jobs.forEach((job, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <strong>${job.title}</strong> at ${job.company} - ${job.location} <br>
+          📱 ${job.mobile}<br>
+          <small>${job.description}</small><br>
+          <button onclick="editJob(${index})">Edit</button>
+          <button onclick="deleteJob(${index})">Delete</button>
+          <hr>
+        `;
+        jobList.appendChild(li);
+      });
+    }
+
+    function deleteJob(index) {
+      if (confirm("Are you sure you want to delete this job?")) {
+        jobs.splice(index, 1);
+        localStorage.setItem("jobs", JSON.stringify(jobs));
+        renderJobs();
+      }
+    }
+
+    function editJob(index) {
+      const job = jobs[index];
+      document.getElementById("jobTitle").value = job.title;
+      document.getElementById("company").value = job.company;
+      document.getElementById("location").value = job.location;
+      document.getElementById("mobile").value = job.mobile;
+      document.getElementById("description").value = job.description;
+      document.getElementById("editIndex").value = index;
+    }
+
+    jobForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const job = {
+        title: document.getElementById("jobTitle").value,
+        company: document.getElementById("company").value,
+        location: document.getElementById("location").value,
+        mobile: document.getElementById("mobile").value,
+        description: document.getElementById("description").value,
+      };
+
+      const editIndex = document.getElementById("editIndex").value;
+
+      if (editIndex === "-1") {
+        jobs.push(job);
+      } else {
+        jobs[editIndex] = job;
+        document.getElementById("editIndex").value = -1;
+      }
+
+      localStorage.setItem("jobs", JSON.stringify(jobs));
+      jobForm.reset();
+      renderJobs();
+      alert("Job saved successfully!");
+    });
+
+    renderJobs();
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url(https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?cs=srgb&dl=pexels-fauxels-3184357.jpg&fm=jpg);
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-panel {
+  background-image: url(https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg?semt=ais_hybrid&w=740);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-panel h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+.login-panel input {
+  width: 93%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #2e2e2e;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-panel input:focus {
+  outline: 2px solid #d9fa05;
+}
+
+.login-panel a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.login-panel button {
+  width: 100%;
+  padding: 14px;
+  background: #05626e;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-panel button:hover {
+  background: #46cfde;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.signup-link a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+

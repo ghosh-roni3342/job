@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Available Jobs</title>
+  <link rel="stylesheet" href="jobs.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Available Jobs</h2>
+    <div id="jobList"></div>
+  </div>
+
+  <script>
+    
+    const jobList = document.getElementById("jobList");
+    const jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+
+    jobs.forEach((job, index) => {
+      const jobDiv = document.createElement("div");
+      jobDiv.className = "job-card";
+      jobDiv.innerHTML = `
+        <h3>${job.title}</h3>
+        <p><strong>Company:</strong> ${job.company}</p>
+        <p><strong>Location:</strong> ${job.location}</p>
+        <p><strong>Contact:</strong> ${job.mobile}</p>
+        <p>${job.description}</p>
+        <button class="applyBtn" data-index="${index}">Apply</button>
+      `;
+      jobList.appendChild(jobDiv);
+    });
+
+    // Redirect to apply.html on Apply button click
+    document.addEventListener("click", function (e) {
+      if (e.target.classList.contains("applyBtn")) {
+        window.location.href = "apply.html";
+      }
+    });
+  </script>
+</body>
+</html>

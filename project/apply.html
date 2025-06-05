@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply for Job - Dream Jobs</title>
+  <link rel="stylesheet" href="apply.css" />
+</head>
+<body>
+
+  <div class="apply-container">
+    <form class="apply-form">
+      <h2>🌟 Apply for Your Dream Job 🌟 </h2>
+
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Phone Number" required>
+
+      <select required>
+        <option value="" disabled selected>Select Experience Level</option>
+        <option>Fresher</option>
+        <option>1-2 Years</option>
+        <option>3-5 Years</option>
+        <option>5+ Years</option>
+      </select>
+
+      <textarea placeholder="Why should we hire you?" rows="4" required></textarea>
+
+      <label class="upload-label">Upload Resume (PDF/Doc):
+        <input type="file" accept=".pdf,.doc,.docx" required>
+      </label>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+</body>
+</html>
